@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="./font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+</head>
+<style>
+    
+    
+</style>
+<body>
+
+
+    <form action="" method="post" id = "contactform"  name="contactform"  >
+        <fieldset id="formwrap">
+            <legend>            ConTact</legend>
+        <ul>
+            <li>
+                <label for="name"> 회사 이름</label>
+                <input type="text" name="name" id="name" required>
+            </li>
+            <li>
+                <label for="phone"> 연락처</label>
+                <input type="tel" name="phone" id="phone" maxlength="11" placeholder="ex)01073347228" required>
+            </li>
+            <li>
+                <label for="datetime">면접 날짜</label>
+                <input type="datetime" name="datetime" id="datetime" required>
+            </li>
+            <li>
+                <label for="email">Email </label>
+                <input type="email" name="email" id="email" placeholder="ex@gmail.com">
+            </li>
+            <li>
+
+                <p>한개만 선택하십시오</p>
+                <label for="position">영업팀</label>
+                <input type="radio" name="position" id="position" value="a">
+                <label for="position1">디자인팀</label>
+                <input type="radio" name="position" id="position1" value="b">
+                <label for="position2">기술지원팀</label>
+                <input type="radio" name="position" id="position2" value="c">
+                <label for="position3">마케팅팀</label>
+                <input type="radio" name="position" id="position3" value="d">
+                <label for="position4">웹퍼블리셔</label>
+                <input type="radio" name="position" id="position4" value="e">
+                <label for="position4"></label>
+            </li>
+            <li>
+                <label for="ability">HTML & CSS</label>
+                <input type="number" min="1" max="5"  name="ability[0]" id="ability">
+                <label for="ability1">NODE JS</label>
+                <input type="number" min="1" max="5" name="ability[1]" id="ability1">
+                <label for="ability2">MYSQL</label>
+                <input type="number" min="1" max="5" name="ability[2]" id="ability2">
+                <label for="ability3">REACT</label>
+                <input type="number" min="1" max="5" name="ability[3]" id="ability3">
+                <label for="ability4">DESIGN</label>
+                <input type="number" min="1" max="5" name="ability[4]" id="ability4">
+            </li>
+            <li>
+                <label for="etc">기타 문의</label>
+                <textarea name="etc" id="etc" cols="30" rows="10"></textarea>
+                
+            </li>
+            <li>
+               <label for="agree"> 개인정보이용동의</label>
+               <input type="checkbox" name="agree" id="agree">
+               <label for="agree"></label>
+            </li>
+            <li>
+                
+                <input type="submit" value="submit" id ="submit">
+            </li>
+        </ul>
+      </fieldset>
+    </form>
+
+
+
+
+
+    <!-- <form action="www.naver.com" method="post" name="contactform" id = "contactform">
+        <div class="form">
+            <ul>
+                <legend>면접 양식서</legend>
+                <li>
+                    <label for="name">회사 이름</label>
+                    <input type="text" id="name" placeholder="ex)회사 명" required>
+                </li>
+                <li>
+                    <label for="phone">연락처</label>
+                    <input type="text" name="phone" placeholder="ex)01073347228" required>
+                </li>
+                <li>
+                    <label for="email">이메일 주소</label>
+                    <input type="text" name="email" placeholder="ex)abc@naver.com">
+                </li>
+                <li>
+                    <label for="datetime">면접날짜 </label>
+                    <input type="datetime" id = "datetime" placeholder="ex) 22-03-28" required>
+                    
+                </li>
+                <li>
+                    <div>
+                        희망 부서
+                    </div>
+                    <label for="ability" vaule=0>영업팀</label>  
+                    <input type="radio" name="ability"id="ability" vaule=a checked>
+                    <label for="ability1" vaule=1>마케팅팀</label>  
+                    <input type="radio" name="ability"id="ability1" vaule=b>
+                    <label for="ability2">기술지원팀</label>  
+                    <input type="radio" name="ability"id="ability2" vaule=c>
+                    <label for="ability3">디자인팀</label>  
+                    <input type="radio" name="ability"id="ability3" vaule=d>
+                    <label for="ability4">웹버플리셔 </label>  
+                    <input type="radio" name="ability"id="ability4" vaule=e>
+                    
+                </li>
+                <li>
+                    <div>
+                        선호기술 순위 (1~4) 포지션이 웹퍼블리셔인 경우.
+                    </div>
+                    <label for="position">html/css</label>
+                    <input type="text" maxlength="1" size="1"  name = position[0] id="position" placeholder="1~4">   
+                    <label for="position1">jquery</label>
+                    <input type="text" maxlength="1" size="1"  name = position[1] id="position1" placeholder="1~4">   
+                    <label for="position2">Node & MySql</label>
+                    <input type="text" maxlength="1" size="1"   name = position[2] id="position2" placeholder="1~4">   
+                    <label for="position3">React</label>
+                    <input type="text" maxlength="1" size="1" name = position[3] id="position3" placeholder="1~4">   
+    name 배열값으로  
+   maxlength  
+
+                </li>
+                <li>
+                    <label for="agree">개인정보이용동의</label>
+                    <input type="checkbox" id="agree" required>  
+                </li>
+            </ul>
+            <input type="submit" value="제안하기">
+            <input type="image" src="제안하기.png">
+        </div>
+
+    </form> -->
+
+
+   
+    
+
+
+    
+</body>
+</html>

@@ -1,0 +1,144 @@
+*{margin:0; padding: 0;}
+    li{list-style: none;}
+
+
+#formwrap{
+    
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgb(46, 236, 125);
+}
+#formwrap li{
+    background-color: rgb(243, 222, 243);
+}
+#formwrap legend{
+    font-size:xx-large;
+    
+}
+
+textarea {
+    width: 100%;
+    height: 6.25em;
+    border: none;
+    resize: none;
+  }
+
+    #contactform{
+        display:block;
+        max-width: 800px;
+        margin:0 auto;
+        padding: 80px 0;
+    }
+    #contactform li{
+        line-height: 3;
+        border:solid rgb(95, 118, 160) 3px;
+        margin: 5px 0;
+    }
+    /* #contactform li li{border:0} */
+    #contactform li{
+        outline: none;
+    }
+    li p {
+        width: 25%;
+        border: rgb(167, 35, 35) 2px solid;
+        margin: 10px 5px ;
+        text-align: center;
+        padding: 0;
+    }
+    body{
+        background-color: aquamarine;
+    }
+
+    #name{
+        margin: 0 auto;
+        width: 100px;
+        background-color: antiquewhite;
+    }
+
+    #submit{
+        position: absolute;        
+        width : 150px;
+        height : 100px;
+        background-color: gold;
+        color: rgb(0, 0, 0);
+        font-size: 2em;
+    }
+
+    
+#etc{
+    
+    width:800px;
+    height: 200px;
+}
+
+li input:hover{
+    background-color: silver;
+}
+
+
+    /* input[id="agree"]{
+        display: none;
+    } */
+
+    /*input 은 숨겨주기*/
+    input#agree{
+        display:none;
+        }
+      /*input 바로 다음의 label*/
+      input#agree + label{
+        cursor:pointer;
+       }
+      
+      /*input 바로 다음의 label:before 에 체크하기 전 CSS 설정*/
+      input#agree + label:before{
+        content:"";
+        display:inline-block;
+        width:17px;
+        height:17px;
+        line-height:17px;
+        border:1px solid #cbcbcb;
+        vertical-align:middle; /*체크 전과 체크 후 높이 차이 때문에 설정*/
+        }
+        
+
+      /*checked된 input 바로 다음의 label:before 에 체크 후 CSS 설정*/  
+      input#agree:checked + label:before{
+        content:"\f00c";/*폰트어썸 유니코드*/
+        font-family:"Font Awesome 5 free"; /*폰트어썸 아이콘 사용*/
+        font-weight:900;/*폰트어썸 설정*/
+        color:#fff;
+        background-color:#000;
+        border-color:#000;
+        font-size:13px;
+        text-align:center;
+        }
+
+        
+        input[type="radio"]{
+            display: none;           
+        }
+        input[type="radio"] + label:before{
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            line-height: 10px;
+            border:2px solid red;
+            vertical-align:middle; 
+        }
+
+        input[type="radio"]:checked + label:before{
+            content: "\f0e7";
+            font-family:"Font Awesome 5 free"; /*폰트어썸 아이콘 사용*/
+            font-weight:900;/*폰트어썸 설정*/
+            color:rgb(0, 0, 0);
+            background-color: rgb(197, 255, 36);
+            border-color:#000;
+            font-size:13px;
+            text-align:center;
+        }
+
+
+   
+
+  
