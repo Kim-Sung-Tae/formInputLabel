@@ -16,12 +16,12 @@
     
 }
 
-textarea {
+/* textarea {
     width: 100%;
     height: 6.25em;
     border: none;
     resize: none;
-  }
+  } */
 
     #contactform{
         display:block;
@@ -76,6 +76,10 @@ li input:hover{
 }
 
 
+input[name="position"]{
+    padding:5px;
+}
+
     /* input[id="agree"]{
         display: none;
     } */
@@ -117,6 +121,7 @@ li input:hover{
         input[type="radio"]{
             display: none;           
         }
+        /* 체크박스 빈칸 */
         input[type="radio"] + label:before{
             content: "";
             display: inline-block;
@@ -126,7 +131,7 @@ li input:hover{
             border:2px solid red;
             vertical-align:middle; 
         }
-
+        /* 체크박스에 들어갈 폰트어썸  */
         input[type="radio"]:checked + label:before{
             content: "\f0e7";
             font-family:"Font Awesome 5 free"; /*폰트어썸 아이콘 사용*/
@@ -137,6 +142,8 @@ li input:hover{
             font-size:13px;
             text-align:center;
         }
+
+
 
 
    

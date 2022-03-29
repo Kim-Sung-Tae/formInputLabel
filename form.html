@@ -16,70 +16,185 @@
 <body>
 
 
-    <form action="" method="post" id = "contactform"  name="contactform"  >
+    <form action="http://www.naver.com" onsubmit="return forminspector(this)" method="post" id = "contactform"  name="contactform"  >
         <fieldset id="formwrap">
-            <legend>            ConTact</legend>
-        <ul>
-            <li>
-                <label for="name"> 회사 이름</label>
-                <input type="text" name="name" id="name" required>
-            </li>
-            <li>
-                <label for="phone"> 연락처</label>
-                <input type="tel" name="phone" id="phone" maxlength="11" placeholder="ex)01073347228" required>
-            </li>
-            <li>
-                <label for="datetime">면접 날짜</label>
-                <input type="datetime" name="datetime" id="datetime" required>
-            </li>
-            <li>
-                <label for="email">Email </label>
-                <input type="email" name="email" id="email" placeholder="ex@gmail.com">
-            </li>
-            <li>
+            <legend onclick="btnclick();">ConTact</legend>
+            <ul>
+                <li>
+                    <label for="name"> 회사 이름</label>
+                    <input type="text" name="name" id="name" >
+                </li>
+                <li>
+                    <label for="phone"> 연락처</label>
+                    <input type="tel" name="phone" id="phone" maxlength="11" placeholder="ex)01073347228" >
+                </li>
+                <li>
+                    <label for="datetime">면접 날짜</label>
+                    <input type="datetime" name="datetime" id="datetime">
+                </li>
+                <li>
+                    <label for="email_add">Email </label>
+                    <input type="text" name="email" id="email" placeholder="ex@gmail.com">@
+                    <input type="text" name="email_add" id="email_add" >
+                    <select name="email_sel" id="email_sel" onchange="change_email();" >
+                        <option value="">직접입력</option>  
+                        <option value="naver.com">naver.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="kakao.com">kakao.com</option>
+                        <option value="yahoo.co.kr">yahoo.co.kr</option>
+                    </select>
+                    
+                </li>
+                <li>
 
-                <p>한개만 선택하십시오</p>
-                <label for="position">영업팀</label>
-                <input type="radio" name="position" id="position" value="a">
-                <label for="position1">디자인팀</label>
-                <input type="radio" name="position" id="position1" value="b">
-                <label for="position2">기술지원팀</label>
-                <input type="radio" name="position" id="position2" value="c">
-                <label for="position3">마케팅팀</label>
-                <input type="radio" name="position" id="position3" value="d">
-                <label for="position4">웹퍼블리셔</label>
-                <input type="radio" name="position" id="position4" value="e">
-                <label for="position4"></label>
-            </li>
-            <li>
-                <label for="ability">HTML & CSS</label>
-                <input type="number" min="1" max="5"  name="ability[0]" id="ability">
-                <label for="ability1">NODE JS</label>
-                <input type="number" min="1" max="5" name="ability[1]" id="ability1">
-                <label for="ability2">MYSQL</label>
-                <input type="number" min="1" max="5" name="ability[2]" id="ability2">
-                <label for="ability3">REACT</label>
-                <input type="number" min="1" max="5" name="ability[3]" id="ability3">
-                <label for="ability4">DESIGN</label>
-                <input type="number" min="1" max="5" name="ability[4]" id="ability4">
-            </li>
-            <li>
-                <label for="etc">기타 문의</label>
-                <textarea name="etc" id="etc" cols="30" rows="10"></textarea>
-                
-            </li>
-            <li>
-               <label for="agree"> 개인정보이용동의</label>
-               <input type="checkbox" name="agree" id="agree">
-               <label for="agree"></label>
-            </li>
-            <li>
-                
-                <input type="submit" value="submit" id ="submit">
-            </li>
-        </ul>
+                    <p>한개만 선택하십시오</p>
+                    <label for="position">영업팀</label>
+                    <input type="radio" name="position" id="position" value="a" checked>
+                    <label for="position1">디자인팀</label>
+                    <input type="radio" name="position" id="position1" value="b">
+                    <label for="position2">기술지원팀</label>
+                    <input type="radio" name="position" id="position2" value="c">
+                    <label for="position3">마케팅팀</label>
+                    <input type="radio" name="position" id="position3" value="d">
+                    <label for="position4">웹퍼블리셔</label>
+                    <input type="radio" name="position" id="position4" value="e">
+                    <label for="position4"></label>
+                </li>
+                <li>
+                    <label for="ability">HTML & CSS</label>
+                    <input type="number" min="1" max="5"  name="ability[0]" id="ability">
+                    <label for="ability1">NODE JS</label>
+                    <input type="number" min="1" max="5" name="ability[1]" id="ability1">
+                    <label for="ability2">MYSQL</label>
+                    <input type="number" min="1" max="5" name="ability[2]" id="ability2">
+                    <label for="ability3">REACT</label>
+                    <input type="number" min="1" max="5" name="ability[3]" id="ability3">
+                    <label for="ability4">DESIGN</label>
+                    <input type="number" min="1" max="5" name="ability[4]" id="ability4">
+                </li>
+                <li>
+                    <label for="etc">기타 문의</label>
+                    <textarea name="etc" id="etc" cols="30" rows="10"></textarea>
+                    
+                </li>
+                <li>
+                <label for="agree"> 개인정보이용동의</label>
+                <input type="checkbox" name="agree" id="agree">
+                <label for="agree"></label>
+                </li>
+                <li>
+                    
+                    <input type="submit" value="submit" id ="submit">
+                </li>
+            </ul>
       </fieldset>
     </form>
+
+<script>
+
+ 
+
+
+    // window.onload = function(){
+    //     var agree = document.forms['contactform']; //데이터타입 Array 
+    //     agree.onsubmit = function(){
+    //         forminspector(this);
+    //         return false;
+    //     }
+    // }
+
+    // 연락처 함수
+    function forminspector(formarray){
+        var hpelement = formarray['phone'];
+        var hp = hpelement.value;
+
+        
+
+        if(hp ==""){      // isNaN -> true, false 
+            alert('예시와 같이 010-1111-1111 기입해주세요.');
+            hpelement.focus();
+            console.log(hpelement);
+            return false;
+        }
+
+
+
+        //동의 여부 
+        var agreechk = formarray['agree']; //form 을 this 라고 할때 그 form 안에  name='agree' 인 객체
+        var agreeval = agreechk.value;
+        console.log(agreechk);
+        console.log(agreechk.checked);
+        console.log(agreeval);
+        if(!agreechk.checked){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+
+        function change_email(){
+
+            var email_add = document.getElementById('email_add');
+            var email_sel = document.getElementById('email_sel');
+
+            var idx = email_sel.options.selectedIndex;
+            var val = email_sel.options[idx].value;
+
+            email_add.value = val;
+        }
+
+
+        function change_email(i){
+            var email_add = i['email_add']
+            var email_add = i['email_sel']
+        }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // function forminspector(){
+        // 유효성 검사 
+        // return false;   // 가지못하게 막는다.
+        // document.forms[]  name 만 잡는다. ex)  document.forms['contactform'] or  document.forms[0] 
+        // document.forms[]  name 만 잡는다. ex)  document.forms[name][name]  -> form안의 name 속성을 가진 Array
+        // document.forms['contactform'][name].value()     //value 값에 접근
+
+        // var agree = document.forms['contactform'].length;
+        // console.log(agree)
+              
+        // if(){
+        //     return false;
+        // }
+    // }
+
+
+
+    // 윈도우 실행문 1 
+    // window.onload = function(){
+    //         forminspector()
+    //     };
+
+    // 윈도우 실행문 2
+    // window.onload =forminspector;
+</script>
+
+
+
+
+
 
 
 
